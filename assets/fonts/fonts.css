@@ -1,0 +1,23 @@
+/* @font-face {
+  font-family: "Anonymous Pro", monospace;
+	src: url('AnonymousPro-Regular.eot');
+	src: local('AnonymousPro-Regular'), local('AnonymousPro-Regular'),
+		url('AnonymousPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('AnonymousPro-Regular.woff') format('woff'),
+		url('AnonymousPro-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: "Anonymous Pro", monospace;
+	src: url('AnonymousPro-Bold.eot');
+	src: local('AnonymousPro-Bold'), local('AnonymousPro-Bold'),
+		url('AnonymousPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('AnonymousPro-Bold.woff') format('woff'),
+		url('AnonymousPro-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap");

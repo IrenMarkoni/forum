@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Обсуждение</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/libs.min.css?1680640259676"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/global.css?1680640259676"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css?1680640259676"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css?1680640259676"/>
+  </head>
+  <body>
+    <div class="content">
+      <header class="header">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__block">
+              <nav class="header__nav"> 
+                <ul class="header__nav-list"> 
+                  <li> <a class="header__nav-link">медиа</a></li>
+                  <li> <a class="header__nav-link">форум</a></li>
+                  <li> <a class="header__nav-link">нутри.вики</a></li>
+                  <li> <a class="header__nav-link">МАРКЕТ</a></li>
+                </ul>
+                <div class="header__nav-close"> 
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#close"></use>
+                  </svg>
+                </div>
+              </nav>
+              <div class="burger">
+                <div class="burger__wrap"><span> </span><span> </span><span> </span></div>меню
+              </div>
+            </div>
+            <div class="header__block"> 
+              <div class="header__logo"><img class="header__logo-big" src="assets/img/logo.svg" alt="alt"/><img class="header__logo-mobile" src="assets/img/logo-mobile.svg" alt="alt"/>
+              </div>
+            </div>
+            <div class="header__block">
+              <div class="header__actions"><a class="header__user header__user_search" href="">
+                  <svg class="header__user-ico">
+                    <use xlink:href="assets/img/sprite.svg#search"></use>
+                  </svg></a><a class="header__user header__user_favs" href=""> 
+                  <svg class="header__user-ico">
+                    <use xlink:href="assets/img/sprite.svg#favs"></use>
+                  </svg></a><a class="header__user header__user_cart" href="">
+                  <svg class="header__user-ico">
+                    <use xlink:href="assets/img/sprite.svg#cart"></use>
+                  </svg></a><a class="header__user header__user_profile" href="">
+                  <svg class="header__user-ico">
+                    <use xlink:href="assets/img/sprite.svg#user"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+          <div class="search"> 
+            <div class="search__content"><a class="search__field openmodal" data-modal="search-modal">
+                <input class="search__input" placeholder="Найти обсуждение на форуме" type="text"></a>
+              <div class="create-topic-bg"><a class="primary-btn create-topic openmodal" data-modal="create-modal">создать обсуждение</a></div>
+              <div class="filter-btn">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#filter"></use>
+                </svg>
+              </div>
+              <div class="close-mobile-search"> 
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#close"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="create-mobile">
+          <div class="create-mobile__top">Новое обсуждение
+            <div class="create-mobile__close openmodal" data-modal="cancel">
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#close"></use>
+              </svg>
+            </div>
+          </div>
+          <form class="form create-discuss__form" action=""> 
+            <div class="form__field"> 
+              <div class="form__label">Тема обсуждения</div>
+              <select class="form__select" name="form-select">
+                <option>Заболевания и диагностика</option>
+                <option>Продвижение и бизнес</option>
+                <option>Анемия</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <div class="form__label">Название обсуждения</div>
+              <input class="form__input validate-field" type="text" placeholder="Кратко опишите основную проблему" maxlength="" name="problem">
+              <div class="form__symbols">
+                <div class="form__symbols-current">0</div>
+                <div class="form__symbols-hash">&nbsp;/&nbsp;</div>
+                <div class="form__symbols-max">80</div>
+              </div>
+            </div>
+            <div class="form__field">
+              <div class="form__label">Подробно опишите проблему</div>
+              <input class="form__input validate-field" type="text" placeholder="Симптомы, анализы, способы лечения" name="symptoms">
+              <div class="form__symbols"> 
+                <div class="form__symbols-current">0</div>
+                <div class="form__symbols-hash">&nbsp;/&nbsp;</div>
+                <div class="form__symbols-max">80</div>
+              </div>
+            </div>
+            <div class="add-files">
+              <div class="add-files__title">Добавьте фото анализов или назначений врача <span>(По желанию)</span></div>
+              <div class="add-files__wrapper">
+                <div class="add-files__item">
+                  <input class="add-files__input" type="file" id="file1">
+                  <label class="add-files__label" for="file1"><span class="add-files__plus"></span><span class="add-files__txt">Загрузить</span></label><img class="add-files__img" src="assets/img//" alt="alt"/>
+                </div>
+                <div class="add-files__item">
+                  <input class="add-files__input" type="file" id="file2">
+                  <label class="add-files__label" for="file2"><span class="add-files__plus"></span><span class="add-files__txt">Загрузить</span></label><img class="add-files__img" src="assets/img//" alt="alt"/>
+                </div>
+                <div class="add-files__item">
+                  <input class="add-files__input" type="file" id="file3">
+                  <label class="add-files__label" for="file3"><span class="add-files__plus"></span><span class="add-files__txt">Загрузить</span></label><img class="add-files__img" src="assets/img//" alt="alt"/>
+                </div>
+                <div class="add-files__item">
+                  <input class="add-files__input" type="file" id="file3">
+                  <label class="add-files__label" for="file3"><span class="add-files__plus"></span><span class="add-files__txt">Загрузить</span></label><img class="add-files__img" src="assets/img//" alt="alt"/>
+                </div>
+              </div>
+            </div>
+            <button class="form__btn primary-btn" type="submit" disabled>создать</button>
+          </form>
+        </div>
+        <div class="search-mobile">
+          <div class="search-mobile__variants">
+            <div class="search-mobile__variants-title">Например:</div>
+            <div class="search-mobile__variants-content"> 
+              <div class="search-mobile__variants-item">выпадают волосы</div>
+              <div class="search-mobile__variants-item">высыпания на коже</div>
+              <div class="search-mobile__variants-item">бады</div>
+              <div class="search-mobile__variants-item">анемия</div>
+              <div class="search-mobile__variants-item">грудное молоко</div>
+              <div class="search-mobile__variants-item">дети</div>
+            </div>
+          </div>
+          <div class="search-mobile__results">
+            <div class="search-mobile__results-content">
+              <div class="posts">
+                <div class="post">
+                  <div class="post__content">
+                    <div class="post__info"> 
+                      <div class="post__photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                      </div>
+                      <div class="post__author">
+                        <div class="post__name">Оксана Александровская</div>
+                        <div class="post__position">Врач-нутрициолог, Тьютор МИИН</div>
+                      </div>
+                    </div>
+                    <div class="post__tags"><a class="post__tags-item post__tags-item_business" href="">продвижение и бизнес</a><a class="post__tags-item post__tags-item_anemia" href="">анемия</a></div><a class="post__title" href="">Стратегия работы при проблемах со здоровьем</a>
+                    <div class="post__text">Здравствуйте! При работе с анемией, сделали упор на работу печени, через 2 мес гемоглобин и печен. показатели улучшились, а мочевина стала 3,58 (была в ноябре 5,5), почему так могло произойти дальше сокращается текст</div>
+                  </div>
+                  <div class="post__bottom">
+                    <div class="reactions"> 
+                      <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                        <div class="reactions-counter">8</div>
+                      </div>
+                      <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                        <div class="reactions-counter">0</div>
+                      </div>
+                    </div>
+                    <div class="comments"> <span>23 </span>
+                      <div>комментария</div>
+                    </div>
+                  </div>
+                  <div class="post__like"></div>
+                  <div class="post__settings"> 
+                    <div class="post__dots"> 
+                      <div class="post__actions">
+                        <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                        <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                      </div>
+                    </div>
+                    <div class="post__date">23/8/23</div>
+                  </div>
+                </div>
+                <div class="post">
+                  <div class="post__content">
+                    <div class="post__info"> 
+                      <div class="post__photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                      </div>
+                      <div class="post__author">
+                        <div class="post__name">Оксана Александровская</div>
+                        <div class="post__position">Врач-нутрициолог, Тьютор МИИН</div>
+                      </div>
+                    </div>
+                    <div class="post__tags"><a class="post__tags-item post__tags-item_business" href="">продвижение и бизнес</a><a class="post__tags-item post__tags-item_anemia" href="">анемия</a></div><a class="post__title" href="">Стратегия работы при проблемах со здоровьем</a>
+                    <div class="post__text">Здравствуйте! При работе с анемией, сделали упор на работу печени, через 2 мес гемоглобин и печен. показатели улучшились, а мочевина стала 3,58 (была в ноябре 5,5), почему так могло произойти дальше сокращается текст</div>
+                  </div>
+                  <div class="post__bottom">
+                    <div class="reactions"> 
+                      <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                        <div class="reactions-counter">8</div>
+                      </div>
+                      <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                        <div class="reactions-counter">0</div>
+                      </div>
+                    </div>
+                    <div class="comments"> <span>23 </span>
+                      <div>комментария</div>
+                    </div>
+                  </div>
+                  <div class="post__like"></div>
+                  <div class="post__settings"> 
+                    <div class="post__dots"> 
+                      <div class="post__actions">
+                        <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                        <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                      </div>
+                    </div>
+                    <div class="post__date">23/8/23</div>
+                  </div>
+                </div>
+                <div class="post">
+                  <div class="post__content">
+                    <div class="post__info"> 
+                      <div class="post__photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                      </div>
+                      <div class="post__author">
+                        <div class="post__name">Оксана Александровская</div>
+                        <div class="post__position">Врач-нутрициолог, Тьютор МИИН</div>
+                      </div>
+                    </div>
+                    <div class="post__tags"><a class="post__tags-item post__tags-item_business" href="">продвижение и бизнес</a><a class="post__tags-item post__tags-item_anemia" href="">анемия</a></div><a class="post__title" href="">Стратегия работы при проблемах со здоровьем</a>
+                    <div class="post__text">Здравствуйте! При работе с анемией, сделали упор на работу печени, через 2 мес гемоглобин и печен. показатели улучшились, а мочевина стала 3,58 (была в ноябре 5,5), почему так могло произойти дальше сокращается текст</div>
+                  </div>
+                  <div class="post__bottom">
+                    <div class="reactions"> 
+                      <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                        <div class="reactions-counter">8</div>
+                      </div>
+                      <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                        <div class="reactions-counter">0</div>
+                      </div>
+                    </div>
+                    <div class="comments"> <span>23 </span>
+                      <div>комментария</div>
+                    </div>
+                  </div>
+                  <div class="post__like"></div>
+                  <div class="post__settings"> 
+                    <div class="post__dots"> 
+                      <div class="post__actions">
+                        <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                        <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                      </div>
+                    </div>
+                    <div class="post__date">23/8/23</div>
+                  </div>
+                </div>
+                <div class="post">
+                  <div class="post__content">
+                    <div class="post__info"> 
+                      <div class="post__photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                      </div>
+                      <div class="post__author">
+                        <div class="post__name">Оксана Александровская</div>
+                        <div class="post__position">Врач-нутрициолог, Тьютор МИИН</div>
+                      </div>
+                    </div>
+                    <div class="post__tags"><a class="post__tags-item post__tags-item_business" href="">продвижение и бизнес</a><a class="post__tags-item post__tags-item_anemia" href="">анемия</a></div><a class="post__title" href="">Стратегия работы при проблемах со здоровьем</a>
+                    <div class="post__text">Здравствуйте! При работе с анемией, сделали упор на работу печени, через 2 мес гемоглобин и печен. показатели улучшились, а мочевина стала 3,58 (была в ноябре 5,5), почему так могло произойти дальше сокращается текст</div>
+                  </div>
+                  <div class="post__bottom">
+                    <div class="reactions"> 
+                      <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                        <div class="reactions-counter">8</div>
+                      </div>
+                      <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                        <div class="reactions-counter">0</div>
+                      </div>
+                    </div>
+                    <div class="comments"> <span>23 </span>
+                      <div>комментария</div>
+                    </div>
+                  </div>
+                  <div class="post__like"></div>
+                  <div class="post__settings"> 
+                    <div class="post__dots"> 
+                      <div class="post__actions">
+                        <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                        <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                      </div>
+                    </div>
+                    <div class="post__date">23/8/23</div>
+                  </div>
+                </div>
+                <div class="post">
+                  <div class="post__content">
+                    <div class="post__info"> 
+                      <div class="post__photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                      </div>
+                      <div class="post__author">
+                        <div class="post__name">Оксана Александровская</div>
+                        <div class="post__position">Врач-нутрициолог, Тьютор МИИН</div>
+                      </div>
+                    </div>
+                    <div class="post__tags"><a class="post__tags-item post__tags-item_business" href="">продвижение и бизнес</a><a class="post__tags-item post__tags-item_anemia" href="">анемия</a></div><a class="post__title" href="">Стратегия работы при проблемах со здоровьем</a>
+                    <div class="post__text">Здравствуйте! При работе с анемией, сделали упор на работу печени, через 2 мес гемоглобин и печен. показатели улучшились, а мочевина стала 3,58 (была в ноябре 5,5), почему так могло произойти дальше сокращается текст</div>
+                  </div>
+                  <div class="post__bottom">
+                    <div class="reactions"> 
+                      <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                        <div class="reactions-counter">8</div>
+                      </div>
+                      <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                        <div class="reactions-counter">0</div>
+                      </div>
+                    </div>
+                    <div class="comments"> <span>23 </span>
+                      <div>комментария</div>
+                    </div>
+                  </div>
+                  <div class="post__like"></div>
+                  <div class="post__settings"> 
+                    <div class="post__dots"> 
+                      <div class="post__actions">
+                        <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                        <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                      </div>
+                    </div>
+                    <div class="post__date">23/8/23</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="inner">
+          <div class="container">
+            <div class="inner__content">
+              <div class="discussion"><a class="discussion__back" href="">назад на форум</a>
+                <div class="discussion__inner"> 
+                  <div class="post__tags"><a class="post__tags-item post__tags-item_business" href="">продвижение и бизнес</a><a class="post__tags-item post__tags-item_anemia" href="">анемия</a></div>
+                  <button class="addTofavs">В избранное</button>
+                  <div class="discussion__info"> 
+                    <div class="discussion__info-main">
+                      <div class="discussion__info-title">Автор обсуждения</div>
+                      <div class="discussion__author">
+                        <div class="discussion__author-photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                        </div>
+                        <div class="discussion__author-info">
+                          <div class="discussion__author-name">Оксана Александровская</div>
+                          <div class="discussion__author-position">Врач-нутрициолог, Тьютор МИИН</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post__settings"> 
+                      <div class="post__dots"> 
+                        <div class="post__actions">
+                          <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                          <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                        </div>
+                      </div>
+                      <div class="post__date">3ч назад</div>
+                    </div>
+                  </div>
+                  <div class="discussion__main">
+                    <div class="discussion__title">Причины шелушения пальчиков и трещин на губах у ребенка?</div>
+                    <div class="discussion__text">Безусловно, базовый вектор развития, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для дальнейших направлений развития. Идейные соображения высшего порядка, а также социально-экономическое развитие, в своём классическом представлении, допускает внедрение экономической целесообразности принимаемых решений! </div>
+                  </div>
+                  <div class="discussion__files">
+                    <div class="discussion__info-title">Прикрепленные материалы</div>
+                    <div class="discussion__files-wrap">
+                      <div class="discussion__files-items"><a class="discussion__files-item" data-fancybox="gallery" href="assets/img/file1.png"><img src="assets/img/file1.png" alt="alt"/></a><a class="discussion__files-item" data-fancybox="gallery" href="assets/img/file2.png"><img src="assets/img/file2.png" alt="alt"/></a><a class="discussion__files-item" data-fancybox="gallery" href="assets/img/file1.png"><img src="assets/img/file1.png" alt="alt"/></a><a class="discussion__files-item" data-fancybox="gallery" href="assets/img/file2.png"><img src="assets/img/file2.png" alt="alt"/></a><a class="discussion__files-item" data-fancybox="gallery" href="assets/img/file1.png"><img src="assets/img/file1.png" alt="alt"/></a><a class="discussion__files-item" data-fancybox="gallery" href="assets/img/file2.png"><img src="assets/img/file2.png" alt="alt"/></a></div>
+                    </div>
+                  </div>
+                  <div class="reactions"> 
+                    <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                      <div class="reactions-counter">8</div>
+                    </div>
+                    <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                      <div class="reactions-counter">0</div>
+                    </div>
+                  </div>
+                  <div class="discussion__comments">
+                    <div class="discussion__comments-top">
+                      <div class="comments"><span>12</span>
+                        <div>комментариев</div>
+                      </div>
+                      <div class="sorting">
+                        <select class="sorting__select">
+                          <option>По популярности</option>
+                          <option>Сначала новые</option>
+                          <option>Сначала старые</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="discussion__field discussion__field_iconed"><img class="discussion__photo" src="assets/img/comment-icon.png" alt="alt"/>
+                    <input class="discussion__input" type="text" placeholder="Оставить комментарий">
+                    <button class="discussion__send" type="submit">
+                      <svg>
+                        <use xlink:href="assets/img/sprite.svg#arrow"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="discussion__blocks">
+                    <div class="discussion__item">
+                      <div class="post post_popular">
+                        <div class="post__content">
+                          <div class="post__info"> 
+                            <div class="post__photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                            </div>
+                            <div class="post__author">
+                              <div class="post__name">Оксана Александровская</div>
+                              <div class="post__position">Врач-нутрициолог, Тьютор МИИН</div>
+                            </div>
+                          </div>
+                          <div class="post__text">Безусловно, базовый вектор развития, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для дальнейших направлений развития. Идейные соображения высшего порядка, а также социально-экономическое развитие, в своём классическом представлении, допускает внедрение экономической целесообразности принимаемых решений! </div>
+                        </div>
+                        <div class="post__bottom">
+                          <div class="reactions"> 
+                            <div class="reactions-item reactions-item_super-like"> <img src="assets/img/super-like.svg" alt="alt"/>Суперлайк
+                              <div class="reactions-item_super-like-tooltip"><img src="assets/img/super-like.svg" alt="alt"/>Это – суперлайк. Администратор отметил комментарий, как особо информативный и качественный.
+                              </div>
+                            </div>
+                            <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                              <div class="reactions-counter">8</div>
+                            </div>
+                            <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                              <div class="reactions-counter">0</div>
+                            </div>
+                          </div>
+                          <div class="post__reply-btn"> 
+                            <svg>
+                              <use xlink:href="assets/img/sprite.svg#reply"></use>
+                            </svg>Ответить
+                          </div>
+                        </div>
+                        <div class="post__settings"> 
+                          <div class="post__dots"> 
+                            <div class="post__actions">
+                              <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                              <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                            </div>
+                          </div>
+                          <div class="post__date">3ч назад</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="discussion__item">
+                      <div class="post">
+                        <div class="post__content">
+                          <div class="post__info"> 
+                            <div class="post__photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                            </div>
+                            <div class="post__author">
+                              <div class="post__name">Оксана Александровская</div>
+                              <div class="post__position">Врач-нутрициолог, Тьютор МИИН</div>
+                            </div>
+                          </div>
+                          <div class="post__text">Безусловно, базовый вектор развития, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для дальнейших направлений развития. Идейные соображения высшего порядка, а также социально-экономическое развитие, в своём классическом представлении, допускает внедрение экономической целесообразности принимаемых решений! </div>
+                        </div>
+                        <div class="post__bottom">
+                          <div class="reactions"> 
+                            <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                              <div class="reactions-counter">8</div>
+                            </div>
+                            <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                              <div class="reactions-counter">0</div>
+                            </div>
+                          </div>
+                          <div class="post__reply-btn"> 
+                            <svg>
+                              <use xlink:href="assets/img/sprite.svg#reply"></use>
+                            </svg>Ответить
+                          </div>
+                        </div>
+                        <div class="post__settings"> 
+                          <div class="post__dots"> 
+                            <div class="post__actions">
+                              <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                              <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                            </div>
+                          </div>
+                          <div class="post__date">3ч назад</div>
+                        </div>
+                      </div>
+                      <div class="post__reply-to">ответ&nbsp;<span>Ангелине</span>
+                        <div class="post__reply-close">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#close"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="discussion__field">
+                        <input class="discussion__input" type="text" value="Ангелина, ">
+                      </div>
+                      <div class="discussion__repost"> 
+                        <div class="post">
+                          <div class="post__content">
+                            <div class="post__info"> 
+                              <div class="post__photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                              </div>
+                              <div class="post__author">
+                                <div class="post__name">Оксана Александровская</div>
+                                <div class="post__position">Врач-нутрициолог, Тьютор МИИН</div>
+                              </div>
+                            </div>
+                            <div class="post__text">Безусловно, базовый вектор развития, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для дальнейших направлений развития.</div>
+                          </div>
+                          <div class="post__bottom">
+                            <div class="reactions"> 
+                              <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                                <div class="reactions-counter">8</div>
+                              </div>
+                              <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                                <div class="reactions-counter">0</div>
+                              </div>
+                            </div>
+                            <div class="post__reply-btn"> 
+                              <svg>
+                                <use xlink:href="assets/img/sprite.svg#reply"></use>
+                              </svg>Ответить
+                            </div>
+                          </div>
+                          <div class="post__settings"> 
+                            <div class="post__dots"> 
+                              <div class="post__actions">
+                                <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                                <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                              </div>
+                            </div>
+                            <div class="post__date">3ч назад</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="discussion__item">
+                      <div class="post">
+                        <div class="post__content">
+                          <div class="post__info"> 
+                            <div class="post__photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                            </div>
+                            <div class="post__author">
+                              <div class="post__name">Оксана Александровская</div>
+                              <div class="post__position">Врач-нутрициолог, Тьютор МИИН</div>
+                            </div>
+                          </div>
+                          <div class="post__text">Безусловно, базовый вектор развития, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для дальнейших направлений развития. Идейные соображения высшего порядка, а также социально-экономическое развитие, в своём классическом представлении, допускает внедрение экономической целесообразности принимаемых решений! </div>
+                        </div>
+                        <div class="post__bottom">
+                          <div class="reactions"> 
+                            <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                              <div class="reactions-counter">8</div>
+                            </div>
+                            <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                              <div class="reactions-counter">0</div>
+                            </div>
+                          </div>
+                          <div class="post__reply-btn"> 
+                            <svg>
+                              <use xlink:href="assets/img/sprite.svg#reply"></use>
+                            </svg>Ответить
+                          </div>
+                        </div>
+                        <div class="post__settings"> 
+                          <div class="post__dots"> 
+                            <div class="post__actions">
+                              <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                              <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                            </div>
+                          </div>
+                          <div class="post__date">3ч назад</div>
+                        </div>
+                      </div>
+                      <div class="post__reply-to">ответ&nbsp;<span>Ангелине</span>
+                        <div class="post__reply-close">
+                          <svg>
+                            <use xlink:href="assets/img/sprite.svg#close"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="discussion__field">
+                        <input class="discussion__input" type="text" value="Ангелина, ">
+                      </div>
+                      <div class="discussion__repost"> 
+                        <div class="post">
+                          <div class="post__content">
+                            <div class="post__info"> 
+                              <div class="post__photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                              </div>
+                              <div class="post__author">
+                                <div class="post__name">Оксана Александровская</div>
+                                <div class="post__position">Врач-нутрициолог, Тьютор МИИН</div>
+                              </div>
+                            </div>
+                            <div class="post__text">Здравствуйте! При работе с анемией, сделали упор на работу печени, через 2 мес гемоглобин и печен. показатели улучшились, а мочевина стала 3,58 (была в ноябре 5,5), почему так могло произойти дальше сокращается текст</div>
+                          </div>
+                          <div class="post__bottom">
+                            <div class="reactions"> 
+                              <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                                <div class="reactions-counter">8</div>
+                              </div>
+                              <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                                <div class="reactions-counter">0</div>
+                              </div>
+                            </div>
+                            <div class="post__reply-btn"> 
+                              <svg>
+                                <use xlink:href="assets/img/sprite.svg#reply"></use>
+                              </svg>Ответить
+                            </div>
+                          </div>
+                          <div class="post__settings"> 
+                            <div class="post__dots"> 
+                              <div class="post__actions">
+                                <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                                <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                              </div>
+                            </div>
+                            <div class="post__date">3ч назад</div>
+                          </div>
+                        </div>
+                        <div class="discussion__field">
+                          <textarea class="discussion__input" rows="3">Ангелина, Безусловно, базовый вектор развития, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для дальнейших направлений развития.</textarea>
+                          <div class="symbols">
+                            <div class="symbols__current">0</div>
+                            <div class="symbols__hash">&nbsp;/&nbsp;</div>
+                            <div class="symbols__max">2200</div>
+                          </div>
+                          <button class="discussion__send" type="submit">
+                            <svg>
+                              <use xlink:href="assets/img/sprite.svg#arrow"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__block"> <a class="footer__logo" href="/"><img src="assets/img/footer-logo.svg" alt="alt"/></a></div>
+          <div class="footer__block"> 
+            <nav class="footer__nav"> 
+              <ul class="footer__nav-list"> 
+                <li><a class="footer__nav-link" href="">медиа</a></li>
+                <li><a class="footer__nav-link" href="">маркет</a></li>
+                <li><a class="footer__nav-link" href="">форум</a></li>
+                <li><a class="footer__nav-link" href="">нутрициологи</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__block"> 
+            <div class="footer__socials">
+              <div class="footer__socials-item"> 
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#youtube"></use>
+                </svg>
+              </div>
+              <div class="footer__socials-item"> 
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#inst"></use>
+                </svg>
+              </div>
+              <div class="footer__socials-item"> 
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#tg"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__copyright"><span>2023</span> Все права защищены</div><a class="footer__policy" href="">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+    <div class="overlay js-overlay-modal"></div>
+    <div class="modals">
+      <div class="modals-wrap">
+        <div class="modal modal_create" data-modal="create-modal">
+          <div class="modal__title">создать обсуждение</div>
+          <form class="form create-discuss__form" action=""> 
+            <div class="form__field"> 
+              <div class="form__label">Выберите тему обсуждения</div>
+              <div class="form__sorting">
+                <select class="form__select" name="form-select">
+                  <option>Заболевания и диагностика</option>
+                  <option>Продвижение и бизнес</option>
+                  <option>Анемия</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__field">
+              <div class="form__label">Название обсуждения</div>
+              <input class="form__input validate-field" type="text" placeholder="Кратко сформулируйте главную проблему" maxlength="" name="problem">
+              <div class="symbols">
+                <div class="symbols__current">0</div>
+                <div class="symbols__hash">&nbsp;/&nbsp;</div>
+                <div class="symbols__max">80</div>
+              </div>
+            </div>
+            <div class="form__field">
+              <div class="form__label">Подробное описание проблемы</div>
+              <input class="form__input validate-field" type="text" placeholder="Проблемы, симптомы, анализы, лечение" name="symptoms">
+              <div class="symbols"> 
+                <div class="symbols__current">0</div>
+                <div class="symbols__hash">&nbsp;/&nbsp;</div>
+                <div class="symbols__max">80</div>
+              </div>
+            </div>
+            <div class="add-files">
+              <div class="add-files__title">Прикрепить материалы <span>(Фото анализов, назначений врача. Не обязательно)</span></div>
+              <div class="add-files__wrapper">
+                <div class="add-files__item">
+                  <input class="add-files__input" type="file" id="file1">
+                  <label class="add-files__label" for="file1"><span class="add-files__plus"></span><span class="add-files__txt">Загрузить</span></label><img class="add-files__img" src="assets/img//" alt="alt"/>
+                </div>
+                <div class="add-files__item">
+                  <input class="add-files__input" type="file" id="file2">
+                  <label class="add-files__label" for="file2"><span class="add-files__plus"></span><span class="add-files__txt">Загрузить</span></label><img class="add-files__img" src="assets/img//" alt="alt"/>
+                </div>
+                <div class="add-files__item">
+                  <input class="add-files__input" type="file" id="file3">
+                  <label class="add-files__label" for="file3"><span class="add-files__plus"></span><span class="add-files__txt">Загрузить</span></label><img class="add-files__img" src="assets/img//" alt="alt"/>
+                </div>
+                <div class="add-files__item">
+                  <input class="add-files__input" type="file" id="file3">
+                  <label class="add-files__label" for="file3"><span class="add-files__plus"></span><span class="add-files__txt">Загрузить</span></label><img class="add-files__img" src="assets/img//" alt="alt"/>
+                </div>
+                <div class="add-files__item">
+                  <input class="add-files__input" type="file" id="file3">
+                  <label class="add-files__label" for="file3"><span class="add-files__plus"></span><span class="add-files__txt">Загрузить</span></label><img class="add-files__img" src="assets/img//" alt="alt"/>
+                </div>
+              </div>
+            </div>
+            <button class="form__btn primary-btn" type="submit" disabled>Создать обсуждение</button>
+          </form>
+        </div>
+        <div class="modal modal_cancel" data-modal="cancel">
+          <div class="modal__close">
+            <svg>
+              <use xlink:href="assets/img/sprite.svg#close"></use>
+            </svg>
+          </div>
+          <div class="modal__title">прекратить создание обсуждения</div>
+          <p>Обсуждение не сохранится. Вы уверены, что хотите выйти?</p>
+          <button class="modal_cancel-btn primary-btn">выйти</button>
+        </div>
+        <div class="modal modal_search" data-modal="search-modal">
+          <div class="container">
+            <div class="modal_search__content">
+              <div class="modal_search__field">
+                <input class="modal_search__input">
+                <div class="modal_search__close"></div>
+              </div>
+              <div class="modal_search__variants">
+                <div class="modal_search__variants-title">Например:</div>
+                <div class="modal_search__variants-content"> 
+                  <div class="modal_search__variants-item">выпадают волосы</div>
+                  <div class="modal_search__variants-item">появились высыпания на коже</div>
+                  <div class="modal_search__variants-item">чем заменить грудное молоко</div>
+                  <div class="modal_search__variants-item">материнство</div>
+                  <div class="modal_search__variants-item">какие бады принимать зимой</div>
+                  <div class="modal_search__variants-item">аллергия на сладкое</div>
+                  <div class="modal_search__variants-item">питание при аутоимунных заболеваниях</div>
+                  <div class="modal_search__variants-item">правила приема бадов во время беременности</div>
+                  <div class="modal_search__variants-item">чем заменить грудное молоко</div>
+                  <div class="modal_search__variants-item">материнство</div>
+                </div>
+                <div class="modal_search__results">
+                  <div class="modal_search__results-content">
+                    <div class="posts">
+                      <div class="post">
+                        <div class="post__content">
+                          <div class="post__info"> 
+                            <div class="post__photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                            </div>
+                            <div class="post__author">
+                              <div class="post__name">Оксана Александровская</div>
+                              <div class="post__position">Врач-нутрициолог, Тьютор МИИН</div>
+                            </div>
+                          </div>
+                          <div class="post__tags"><a class="post__tags-item post__tags-item_business" href="">продвижение и бизнес</a><a class="post__tags-item post__tags-item_anemia" href="">анемия</a></div><a class="post__title" href="">Стратегия работы при проблемах со здоровьем</a>
+                          <div class="post__text">Здравствуйте! При работе с анемией, сделали упор на работу печени, через 2 мес гемоглобин и печен. показатели улучшились, а мочевина стала 3,58 (была в ноябре 5,5), почему так могло произойти дальше сокращается текст</div>
+                        </div>
+                        <div class="post__bottom">
+                          <div class="reactions"> 
+                            <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                              <div class="reactions-counter">8</div>
+                            </div>
+                            <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                              <div class="reactions-counter">0</div>
+                            </div>
+                          </div>
+                          <div class="comments"> <span>23 </span>
+                            <div>комментария</div>
+                          </div>
+                        </div>
+                        <div class="post__like"></div>
+                        <div class="post__settings"> 
+                          <div class="post__dots"> 
+                            <div class="post__actions">
+                              <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                              <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                            </div>
+                          </div>
+                          <div class="post__date">23/8/23</div>
+                        </div>
+                      </div>
+                      <div class="post">
+                        <div class="post__content">
+                          <div class="post__info"> 
+                            <div class="post__photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                            </div>
+                            <div class="post__author">
+                              <div class="post__name">Оксана Александровская</div>
+                              <div class="post__position">Врач-нутрициолог, Тьютор МИИН</div>
+                            </div>
+                          </div>
+                          <div class="post__tags"><a class="post__tags-item post__tags-item_business" href="">продвижение и бизнес</a><a class="post__tags-item post__tags-item_anemia" href="">анемия</a></div><a class="post__title" href="">Стратегия работы при проблемах со здоровьем</a>
+                          <div class="post__text">Здравствуйте! При работе с анемией, сделали упор на работу печени, через 2 мес гемоглобин и печен. показатели улучшились, а мочевина стала 3,58 (была в ноябре 5,5), почему так могло произойти дальше сокращается текст</div>
+                        </div>
+                        <div class="post__bottom">
+                          <div class="reactions"> 
+                            <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                              <div class="reactions-counter">8</div>
+                            </div>
+                            <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                              <div class="reactions-counter">0</div>
+                            </div>
+                          </div>
+                          <div class="comments"> <span>23 </span>
+                            <div>комментария</div>
+                          </div>
+                        </div>
+                        <div class="post__like"></div>
+                        <div class="post__settings"> 
+                          <div class="post__dots"> 
+                            <div class="post__actions">
+                              <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                              <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                            </div>
+                          </div>
+                          <div class="post__date">23/8/23</div>
+                        </div>
+                      </div>
+                      <div class="post">
+                        <div class="post__content">
+                          <div class="post__info"> 
+                            <div class="post__photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                            </div>
+                            <div class="post__author">
+                              <div class="post__name">Оксана Александровская</div>
+                              <div class="post__position">Врач-нутрициолог, Тьютор МИИН</div>
+                            </div>
+                          </div>
+                          <div class="post__tags"><a class="post__tags-item post__tags-item_business" href="">продвижение и бизнес</a><a class="post__tags-item post__tags-item_anemia" href="">анемия</a></div><a class="post__title" href="">Стратегия работы при проблемах со здоровьем</a>
+                          <div class="post__text">Здравствуйте! При работе с анемией, сделали упор на работу печени, через 2 мес гемоглобин и печен. показатели улучшились, а мочевина стала 3,58 (была в ноябре 5,5), почему так могло произойти дальше сокращается текст</div>
+                        </div>
+                        <div class="post__bottom">
+                          <div class="reactions"> 
+                            <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                              <div class="reactions-counter">8</div>
+                            </div>
+                            <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                              <div class="reactions-counter">0</div>
+                            </div>
+                          </div>
+                          <div class="comments"> <span>23 </span>
+                            <div>комментария</div>
+                          </div>
+                        </div>
+                        <div class="post__like"></div>
+                        <div class="post__settings"> 
+                          <div class="post__dots"> 
+                            <div class="post__actions">
+                              <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                              <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                            </div>
+                          </div>
+                          <div class="post__date">23/8/23</div>
+                        </div>
+                      </div>
+                      <div class="post">
+                        <div class="post__content">
+                          <div class="post__info"> 
+                            <div class="post__photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                            </div>
+                            <div class="post__author">
+                              <div class="post__name">Оксана Александровская</div>
+                              <div class="post__position">Врач-нутрициолог, Тьютор МИИН</div>
+                            </div>
+                          </div>
+                          <div class="post__tags"><a class="post__tags-item post__tags-item_business" href="">продвижение и бизнес</a><a class="post__tags-item post__tags-item_anemia" href="">анемия</a></div><a class="post__title" href="">Стратегия работы при проблемах со здоровьем</a>
+                          <div class="post__text">Здравствуйте! При работе с анемией, сделали упор на работу печени, через 2 мес гемоглобин и печен. показатели улучшились, а мочевина стала 3,58 (была в ноябре 5,5), почему так могло произойти дальше сокращается текст</div>
+                        </div>
+                        <div class="post__bottom">
+                          <div class="reactions"> 
+                            <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                              <div class="reactions-counter">8</div>
+                            </div>
+                            <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                              <div class="reactions-counter">0</div>
+                            </div>
+                          </div>
+                          <div class="comments"> <span>23 </span>
+                            <div>комментария</div>
+                          </div>
+                        </div>
+                        <div class="post__like"></div>
+                        <div class="post__settings"> 
+                          <div class="post__dots"> 
+                            <div class="post__actions">
+                              <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                              <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                            </div>
+                          </div>
+                          <div class="post__date">23/8/23</div>
+                        </div>
+                      </div>
+                      <div class="post">
+                        <div class="post__content">
+                          <div class="post__info"> 
+                            <div class="post__photo"> <img src="assets/img/avatar.png" alt="alt"/>
+                            </div>
+                            <div class="post__author">
+                              <div class="post__name">Оксана Александровская</div>
+                              <div class="post__position">Врач-нутрициолог, Тьютор МИИН</div>
+                            </div>
+                          </div>
+                          <div class="post__tags"><a class="post__tags-item post__tags-item_business" href="">продвижение и бизнес</a><a class="post__tags-item post__tags-item_anemia" href="">анемия</a></div><a class="post__title" href="">Стратегия работы при проблемах со здоровьем</a>
+                          <div class="post__text">Здравствуйте! При работе с анемией, сделали упор на работу печени, через 2 мес гемоглобин и печен. показатели улучшились, а мочевина стала 3,58 (была в ноябре 5,5), почему так могло произойти дальше сокращается текст</div>
+                        </div>
+                        <div class="post__bottom">
+                          <div class="reactions"> 
+                            <div class="reactions-item reactions-item_likes"><img src="assets/img/like.svg" alt="alt"/>
+                              <div class="reactions-counter">8</div>
+                            </div>
+                            <div class="reactions-item post__reactions-item_dislikes"><img src="assets/img/dislike.svg" alt="alt"/>
+                              <div class="reactions-counter">0</div>
+                            </div>
+                          </div>
+                          <div class="comments"> <span>23 </span>
+                            <div>комментария</div>
+                          </div>
+                        </div>
+                        <div class="post__like"></div>
+                        <div class="post__settings"> 
+                          <div class="post__dots"> 
+                            <div class="post__actions">
+                              <div class="post__actions-item post__actions-item_share">Поделиться</div>
+                              <div class="post__actions-item post__actions-item_complain">Пожаловаться</div>
+                            </div>
+                          </div>
+                          <div class="post__date">23/8/23</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/libs.min.js?1680640259677"></script>
+    <script src="assets/js/global/global.min.js?1680640259677"></script>
+    <script src="assets/js/main/main.min.js?1680640259677"></script>
+  </body>
+</html>
